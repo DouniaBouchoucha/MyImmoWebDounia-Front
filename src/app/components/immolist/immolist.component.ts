@@ -10,6 +10,10 @@ import { ImmoService } from 'src/app/services/immo.service';
 export class ImmolistComponent implements OnInit {
 
   data: Immo[];
+  width: number = 100;
+  height: number = 100;
+
+
 
   constructor(private service: ImmoService) { }
 
