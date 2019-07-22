@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ImmolistComponent } from './components/immolist/immolist.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ImmoDetailsComponent } from './components/immo-details/immo-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     FooterComponent,
     ImmolistComponent,
     WelcomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ImmoDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { ImmoDetailsComponent } from './components/immo-details/immo-details.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ImmolistComponent } from './components/immolist/immolist.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
@@ -8,6 +9,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {path: '', component: WelcomeComponent, pathMatch: 'full'},
   {path: 'list', component: ImmolistComponent},
+  {path: 'detail/:id', component: ImmoDetailsComponent },
   {path: '**', component: NotFoundComponent }
 ];
 

@@ -1,0 +1,49 @@
+<div class="card offset-1 col-md-10">
+  <div class="card-header bg-info text-white">
+    <h2>Details for {{ immo?.adress }}</h2>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-3">Name:</div>
+          <div class="col-md-6">{{ immo?.id }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Localité:</div>
+          <div class="col-md-6">{{ immo?.adress }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Contact:</div>
+          <div class="col-md-6">{{ immo?.contact }}</div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3">Surface:</div>
+          <div class="col-lg-6">{{ immo?.surfaceArea }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Price:</div>
+          <div class="col-md-6">
+            {{ immo?.price | currency: "EUR":"symbol":"1.2-2" }}
+          </div>
+        </div>
+
+
+      <div class="col-md-6 align-items-center">
+        <img class='center img-responsive' [style.width.px]='150'
+        [style.height.px]='150' [style.margin.px]='2'
+        [src]='immo?.pictureUrl' [title]='immo.adress'/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card col-md-10">
+        <a name="" id="" class="btn btn-primary" role="button">Ajouter un bien</a>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+    <a class="btn btn-lg" (click)="onBack()" style="width:100px">
+      <i class="fa fa-angle-double-left"></i> Back
+    </a>
+  </div>
+</div>

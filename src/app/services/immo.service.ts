@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Immo } from '../domain/immo';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +16,11 @@ export class ImmoService {
   public getAllImmo(): Observable<Immo[]> {
 
     return this.client.get<Immo[]>(this.URL);
+  }
+
+  public getImmoById(id: number): Observable<Immo> {
+    return this.client.get<Immo>(this.URL+'/'+id);
+
   }
 
 }
