@@ -32,12 +32,12 @@
       <div class="col-md-6 align-items-center">
         <img class='center img-responsive' [style.width.px]='150'
         [style.height.px]='150' [style.margin.px]='2'
-        [src]='immo?.pictureUrl' [title]='immo.adress'/>
+        [src]='immo?.pictureUrl' [title]=''/>
       </div>
     </div>
     <div class="row">
       <div class="card col-md-10">
-        <a name="" id="" class="btn btn-primary" role="button">Ajouter un bien</a>
+        <a name="" id="" class="btn btn-primary" role="button" (click)="addToCart()" routerLinkActive="router-link-active" >Add to cart</a>
       </div>
     </div>
   </div>

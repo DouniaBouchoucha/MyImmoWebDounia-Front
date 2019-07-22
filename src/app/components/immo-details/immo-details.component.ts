@@ -1,3 +1,4 @@
+import { CartService } from './../../services/cart.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ImmoService } from 'src/app/services/immo.service';
@@ -16,7 +17,8 @@ export class ImmoDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private immoService: ImmoService) {
+              private immoService: ImmoService,
+              private cartServices: CartService) {
   }
 
   ngOnInit(): void {
@@ -44,5 +46,11 @@ export class ImmoDetailsComponent implements OnInit {
   }
   onBack(): void {
       this.router.navigate(['/list']);
+  }
+  addToCart() {
+    console.log('>>>>>>>> dans addtoCart()');
+    this.cartServices.addToCart(this.immo);
+    console.log('>>>> taille de la carte' + this.cartServices.getCartLength());
+    this.router.navigate(['/list']);   // Programmatic navigation
   }
 }

@@ -11,6 +11,7 @@ import { ImmolistComponent } from './components/immolist/immolist.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ImmoDetailsComponent } from './components/immo-details/immo-details.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ImmoDetailsComponent } from './components/immo-details/immo-details.com
     ImmolistComponent,
     WelcomeComponent,
     NotFoundComponent,
-    ImmoDetailsComponent
+    ImmoDetailsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
